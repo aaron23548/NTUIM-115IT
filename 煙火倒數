@@ -1,0 +1,14 @@
+function delay() {
+  return new Promise((resolve) => setTimeout(resolve, 1000));
+}
+
+async function countdown() {
+  for (let seconds = 10; seconds > 0; seconds--) {
+    console.log(seconds);
+    await delay();
+  }
+
+  console.log("新年快樂！");
+}
+
+countdown();
